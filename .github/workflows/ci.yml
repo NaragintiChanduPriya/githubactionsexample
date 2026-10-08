@@ -39,7 +39,7 @@ jobs:
   build:
     needs: lint
     runs-on: ubuntu-latest
-    environment: development
+    environment: production
 
 
     steps:

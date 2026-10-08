@@ -31,6 +31,10 @@ jobs:
         env:
           MY_SECRET: ${{ secrets.MY_SECRET }}
 
+      - name: Test repository variable
+        run: 'echo "Application: $APP_NAME"
+        env:
+          APP_NAME: ${{ vars.APP_NAME }}
 
   build:
     needs: lint

@@ -59,11 +59,11 @@ jobs:
 
       - name: development variables
         run: |
-            echo "ApiUrl : $APP_URL"
+            echo "AppUrl : $APP_URL"
             echo "Database password is configured"
         env:
             APP_URL: ${{ vars.APP_URL }}
-            DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+            DB_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
 
 
     

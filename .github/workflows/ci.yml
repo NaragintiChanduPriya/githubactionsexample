@@ -57,7 +57,7 @@ jobs:
       - name: Build application
         run: npm run build
 
-      - name: development variables
+      - name: production variables
         run: |
             echo "AppUrl : $APP_URL"
             echo "Database password is configured"

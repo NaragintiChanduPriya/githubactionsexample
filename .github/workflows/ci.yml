@@ -26,6 +26,11 @@ jobs:
       - name: Run lint
         run: npm run lint
 
+      - name: Test secret
+        run: echo "secret is available"
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+
 
   build:
     needs: lint

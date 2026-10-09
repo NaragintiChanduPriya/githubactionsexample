@@ -5,9 +5,8 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
-  const api = "hello";
-
+  const [count, setCount] = useState(0)
+  
   return (
     <>
       <section id="center">

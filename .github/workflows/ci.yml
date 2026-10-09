@@ -39,8 +39,7 @@ jobs:
   build:
     needs: lint
     runs-on: ubuntu-latest
-   
-
+    environment: development
 
     steps:
       - name: Checkout code
@@ -56,6 +55,11 @@ jobs:
 
       - name: Build application
         run: npm run build
+    
+      - name: development variables
+        run: 'echo " APP url : $APP_url"'
+        env:
+          APP_URL: ${{ vars.APP_URL }}
 
 
   deploy-production:

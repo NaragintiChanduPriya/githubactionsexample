@@ -65,5 +65,12 @@ jobs:
             APP_URL: ${{ vars.APP_URL }}
             DB_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
 
+  deploy-production:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
 
+    steps:
+      - name: Production deployment
+        run: echo "Production deployment approved!"
     
